@@ -5,7 +5,7 @@ const HomeFuncionario = () => {
 
     return (
 
-        <div>
+        <div class='container'>
 
             <MenuFuncionario/>
         </div>
