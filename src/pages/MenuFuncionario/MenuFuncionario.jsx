@@ -1,14 +1,24 @@
 
+import styles from './MenuFuncionario.module.css'
+
+import { Link } from 'react-router-dom'
+
+
 const MenuFuncionario = () => {
 
 
-    return (
+    return  (
 
         <div>
- <nav className="navbar navbar-expand-lg navbar-light bg-light p-2 rounded shadow-sm w-100">
-        <a className="navbar-brand" href="/pizzaria/funcionario/home">
+            <nav className={`navbar navbar-expand-lg navbar-light bg-light p-2 rounded shadow-sm w-100 ${styles.menu}`}>
+        
+       <Link
+         to="/home"
+         className={`navbar-brand ${styles.logo}`}
+       >
           Home
-        </a>
+       </Link>
+
 
         {/* Botão Hamburguer para telas menores */}
         <button
@@ -26,19 +36,28 @@ const MenuFuncionario = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto">
             <li className="nav-item active">
-              <a className="nav-link" href="/pizzaria/funcionario/produto">
-                Produtos
-              </a>
+              <Link
+               to="/produtos"
+               className={`nav-link ${styles.itemMenu}`}
+              >
+                 Produtos
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/pizzaria/funcionario/categoria">
-                Categorias
-              </a>
+              <Link
+               to="/categorias"
+               className={`nav-link ${styles.itemMenu}`}
+              >
+                 Categorias
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/pizzaria/funcionario/estoque">
-                Estoque
-              </a>
+              <Link
+               to="/estoques"
+               className={`nav-link ${styles.itemMenu}`}
+              >
+                 Estoque
+              </Link>
             </li>
 
             {/* Dropdown Menu */}
@@ -85,8 +104,8 @@ const MenuFuncionario = () => {
           </button>
         </div>
       </nav>
-
         </div>
     )
 }
+
 export default MenuFuncionario

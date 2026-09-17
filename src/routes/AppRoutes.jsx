@@ -1,23 +1,59 @@
-import{
-    BrowserRouter,
-    Routes,
-    Route
-}
-from "react-router-dom"
-import HomeFuncionario from "../pages/HomeFuncionario/HomeFuncionario"
+import {
+   HashRouter,
+   BrowserRouter,
+   Routes,
+   Route 
+} from "react-router-dom"
+
+// Obs: Para importar componentes específicos de uma tecnologia, escolha o componente, caso mais de 1
+//      utilize a vírgula para separá-los
+
+import HomeFuncionario from '../pages/HomeFuncionario/HomeFuncionario'
+import ListarProduto from '../pages/ListarProduto/ListarProduto'
+import ListarCategoria from "../pages/ListarCategoria/ListarCategoria"
+import NovoProduto from "../pages/NovoProduto/NovoProduto"
+
+
+// BrowserRouter : Navegação utilizando a tag html <a></a> com href "Sempre recarrega a página completa"
+// HashRouter: Navegação utilizando o componente <Link></Link> do react-router-dom "Recarrega só o necessário"
+
 
 const AppRoutes = () => {
 
+
     return (
-        <BrowserRouter>
-        <Routes>
-            <Route
-            path="/"
-            element={<HomeFuncionario/>}>
-            </Route>
-        </Routes>
-        
-        </BrowserRouter>
+                <HashRouter>
+                      <Routes>
+                             <Route 
+                                path="/"
+                                element={<HomeFuncionario/>}
+                             />
+
+                             <Route 
+                                path="/home"
+                                element={<HomeFuncionario/>}
+                             />
+
+                             <Route 
+                                path="/produtos"
+                                element={<ListarProduto/>}
+                             />
+
+                            <Route 
+                                path="/categoria"
+                                element={<ListarCategoria/>}
+                             />
+
+                            <Route 
+                                path="/produtos/novo"
+                                element={<NovoProduto/>}
+                             />
+
+
+                      </Routes>
+                </HashRouter>
+               
     )
 }
+
 export default AppRoutes
