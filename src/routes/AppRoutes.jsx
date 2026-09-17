@@ -12,6 +12,7 @@ import HomeFuncionario from '../pages/HomeFuncionario/HomeFuncionario'
 import ListarProduto from '../pages/ListarProduto/ListarProduto'
 import ListarCategoria from "../pages/ListarCategoria/ListarCategoria"
 import NovoProduto from "../pages/NovoProduto/NovoProduto"
+import MenuFuncionario from "../pages/MenuFuncionario/MenuFuncionario"
 
 
 // BrowserRouter : Navegação utilizando a tag html <a></a> com href "Sempre recarrega a página completa"
